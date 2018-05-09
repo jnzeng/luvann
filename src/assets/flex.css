@@ -1,0 +1,35 @@
+/* container */
+.flex { display: flex; }
+
+/* direction */
+/* flex-direction: row | row-reverse | column | column-reverse; */
+.flex.col { flex-direction: column; }
+.flex.row { flex-direction: row; }
+.flex.col-reverse { flex-direction: column-reverse; }
+.flex.row-reverse { flex-direction: row-reverse; }
+
+/* wrap */
+/* flex-wrap: nowrap | wrap | wrap-reverse; */
+.flex.nowrap { flex-wrap: nowrap; }
+.flex.wrap { flex-wrap: wrap; }
+.flex.wrap-reverse { flex-wrap: wrap; }
+
+/* main axis */
+/* justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly; */
+.flex[class^="start-"], .flex[class*=" start-"] { justify-content: flex-start; }
+.flex[class^="end-"], .flex[class*=" end-"] { justify-content: flex-end; }
+.flex[class^="center-"], .flex[class*=" center-"] { justify-content: center; }
+.flex[class^="between-"], .flex[class*=" between-"] { justify-content: space-between; }
+.flex[class^="around-"], .flex[class*=" around-"] { justify-content: space-around; }
+.flex[class^="evenly-"], .flex[class*=" evenly-"] { justify-content: space-evenly; }
+
+/* cross axis */
+/* align-items: flex-start | flex-end | center | baseline | stretch; */
+.flex[class$="-start"], .flex[class*="-start "] { align-items: flex-start; }
+.flex[class$="-end"], .flex[class*="-end "] { align-items: flex-end; }
+.flex[class$="-center"], .flex[class*="-center "] { align-items: center; }
+.flex[class$="-baseline"], .flex[class*="-baseline "] { align-items: baseline; }
+.flex[class$="-stretch"], .flex[class*="-stretch "] { align-items: stretch; }
+
+.flex > .grow { flex-grow: 1; }
+.flex > .shrink { flex-shrink: 1; }

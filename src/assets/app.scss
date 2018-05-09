@@ -1,0 +1,101 @@
+$gold: #cfb39c;
+$blue: #c7dcec;
+
+$info: $blue;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:300,400,900');
+
+$family-sans-serif: 'Roboto', sans-serif;
+
+@import "../../node_modules/bulma/bulma.sass";
+
+@import "flex.css";
+@import "space.css";
+
+@import "form.scss";
+
+// variables
+$icon-size: 4rem;
+
+:root {
+  --color-gold: #cfb39c;
+  --color-blue: #c7dcec;
+  --color-grey: #888888;
+}
+
+#app {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.quiz {
+  text-align: center;
+}
+
+.page--body {
+  .title {
+    font-family: 'Roboto Condensed';
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 2rem;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  input.radio {
+    display: none;
+  }
+
+  label.radio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 10px;
+    text-align: center;
+  }
+
+  label.radio .icon-button {
+    border-radius: 50%;
+    padding: 10px;
+    width: 89px;
+    height: 89px;
+  }
+
+  // icon label
+  label.radio span {
+    max-width: 120px;
+    color: #888;
+    font-family: 'Roboto';
+    font-weight: 300;
+    white-space: pre-line;
+  }
+
+  // active icon bg
+  label.radio.active .icon-button {
+    background-color: var(--color-blue);
+  }
+
+  label.radio.active span {
+    color: #000;
+  }
+
+  // icon sizing
+  .icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-button img {
+    width: $icon-size;
+    max-height: $icon-size;
+    max-width: $icon-size;
+  }
+}
